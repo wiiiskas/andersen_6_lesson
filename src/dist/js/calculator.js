@@ -67,15 +67,17 @@ export default class Calculator {
                             break;
                         }
                         case 'submit': {
-                            let expression = Number(this.checkToFixed(eval(this._arrayOfNumbers.reduce((result, item, index) => {
-                                return `${result}${this._arrayOfSigns[index-1]}${item}`;
-                            })), 8));
-                            this.resetDisplaySize();
-                            this.cleanMemory();
-                            this._IS_END = true;
-                            if(!isFinite(expression)) expression = '0';
-                            this._arrayOfNumbers.push(expression.toString());
-                            this.render(this._arrayOfNumbers[0], ' ');
+                            if(this._arrayOfNumbers.length){
+                                let expression = Number(this.checkToFixed(eval(this._arrayOfNumbers.reduce((result, item, index) => {
+                                    return `${result}${this._arrayOfSigns[index-1]}${item}`;
+                                })), 8));
+                                this.resetDisplaySize();
+                                this.cleanMemory();
+                                this._IS_END = true;
+                                if(!isFinite(expression)) expression = '0';
+                                this._arrayOfNumbers.push(expression.toString());
+                                this.render(this._arrayOfNumbers[0], ' ');
+                            }
                             break;
                         }
                         case 'prepares':{
