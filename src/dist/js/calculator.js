@@ -82,7 +82,7 @@ export default class Calculator {
                             const currentNumberIndex = this._arrayOfNumbers.length-1;
                             const currentNumber = this._arrayOfNumbers[currentNumberIndex];
                             const regExp = new RegExp("\\"+signs[key], 'gm');
-                            this._arrayOfNumbers[currentNumberIndex] += (currentNumber && !currentNumber.match(regExp)) ? signs[key] : '' ;
+                            this._arrayOfNumbers[currentNumberIndex] += (currentNumber && !String(currentNumber).match(regExp)) ? signs[key] : '' ;
                             break;
                         }
                         case 'number':
