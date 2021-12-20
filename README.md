@@ -1,11 +1,12 @@
 ## Написать калькулятор.
 
-Запуск проекта `npm start`
+Запуск проекта: `npm start`
 
 Дев сборка: `npm dev`
 
 Прод сборка:  `npm build`
 
+#### [ >>>> Ссылка на деплой <<<<](https://andersen-6-lesson.vercel.app/)
 
 
 ![Screenshot](calculator.png)
