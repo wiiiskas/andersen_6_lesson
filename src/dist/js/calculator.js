@@ -68,6 +68,10 @@ export default class Calculator {
                         }
                         case 'submit': {
                             if(this._arrayOfNumbers.length){
+                                if(this._arrayOfNumbers[this._arrayOfNumbers.length-1]==='') {
+                                    this._arrayOfSigns.pop();
+                                    this._arrayOfNumbers.pop();
+                                }
                                 let expression = Number(this.checkToFixed(eval(this._arrayOfNumbers.reduce((result, item, index) => {
                                     return `${result}${this._arrayOfSigns[index-1]}${item}`;
                                 })), 8));
