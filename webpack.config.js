@@ -47,7 +47,7 @@ module.exports ={
         ]
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'public'),
         filename: "./assets/js/index.[contenthash].bundle.js"
     },
     resolve: {
@@ -77,7 +77,7 @@ module.exports ={
         }),
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src', 'assets', 'favicon.ico'), to: path.resolve(__dirname, 'build', 'favicon.ico') },
+                { from: path.resolve(__dirname, 'src', 'assets', 'favicon.ico'), to: path.resolve(__dirname, 'public', 'favicon.ico') },
             ],
         }),
     ]
